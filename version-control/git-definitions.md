@@ -1,5 +1,6 @@
 # Git Definitions
 
+## How's it going Andrew?
 **Instructions: ** Define each of the following Git concepts.
 
 * What is version control?  Why is it useful?
