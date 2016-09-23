@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>The great form!</title>
+</head>
+<body>
+	<form action="success.html" method="post">
+		<fieldset>
+		<div>
+			<label>Name:</label>
+			<input type="text" name="name">
+		</div>
+		<div>
+			<label>Favorite Colour:</label>
+			<select name="Favorite Colour">
+				<option value="blue">Blue</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="black">Black</option>
+				<option value="purple">Purple</option>
+				<option value="red">Red</option>
+				<option value="turqoise">Turqoise</option>
+				<option value="none">None of these</option>
+			</select>
+		</div>
+		</fieldset>
+		<fieldset>
+			<div>
+			<label>Tell me a short story please &lt;3</label>
+			<br><textarea name="short_story" rows="20" cols="30">Once upon a time...</textarea>
+			</div>
+	    </fieldset>
+	    <fieldset>
+			<div>
+			<label>Which party are you affiliated with?</label><br>
+				<input type="radio" name="party" value="none" checked>No Affiliation<br>
+				<input type="radio" name="party" value="democrat">Democrat<br>
+				<input type="radio" name="party" value="republican">Republican<br>
+				<input type="radio" name="party" value="libertarian">Libertarian<br>
+				<input type="radio" name="party" value="green">Green<br>
+				<input type="radio" name="party" value="communist">Communist<br>
+				<input type="radio" name="party" value="independent">Independent<br>
+			</div>
+			<div>
+				<label>What's your favorite website?</label>
+				<input type="url" name="fave_website" value="https://www.google.com">
+			</div>
+		</fieldset>
+		<button type="submit">Proceed</button>
+	</form>
+</body>
+</html>
