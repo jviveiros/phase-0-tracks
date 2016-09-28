@@ -1,0 +1,29 @@
+section#contact-info {
+  font-size: 0.8em;
+}
+
+section.job {
+	background-color: #e9e5dc;
+	border-radius: 10px;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	margin: 10px;
+}
+.list {
+	font-size:0.8em;
+}
+/* The cascading part of cascading style sheets means that all the style sheets will apply but 
+with a specific way of resolving conflicts. There are four ways that Cascading Style Sheets
+resolve conflicts. Inheritance, the cascade, the specificity of an instruction, if it's marked
+as !important and location of rules */
+
+/* a Pseudo-selector is something that only occurs on a page once a certain condition is met */
+
+.job:hover {
+	background-color: green;
+
+}
+#work-experience h3 {
+	font-style: oblique;
+}
