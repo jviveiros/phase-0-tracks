@@ -1,0 +1,30 @@
+##Elevator Algorithm
+
+-Ask which floor an individual wants to travel to upon entering the elevator
+-Begin Elevator instruction set
+	-Wait 3 seconds
+	-Close Doors
+	-go from the lowest floor given to the highest. E.G if you received orders for floor 4, 12, 2, and 17. Go to the floors in ascending order: 2,4,12,17. When starting at the ground floor. When starting at the top do descending order.
+	-At each floor open the doors and wait for individuals to exit or enter the elevator.
+	-Upon exit of  the last rider, return to the ground floor only if no one called the elevator from another floor.
+		-If someone called an elevator go to that floor, open doors, wait three seconds and go to the floor they instructed.
+-Elevator should work on a first come - first served basis. If instructions are given before on a different floor than rider then finish the ride before moving to the next passenger.
+-Repeat
+
+##Cleaning the Litter Box Algorithm
+
+-Grab bag from drawer in kitchen, located 34 feet from the litterbox.
+	-15 feet straight from litter box, right 3 feet, right 10 feet, left 6 feet. 
+	-Open drawer 1 foot from the ground. 
+	-Return to litter box by going in the directions in reverse.
+-Remove Litterbox Lid
+-Grab litter scoop, approximately 10 inches to right of litter box.
+-Hold litter scoop firmly and plant into litter.
+	-Rake the litter scoop through the litter, collecting clumps
+		-Once the scoop is full of clumps, dump the contents into the plastic bag.
+		-Repeat the raking of litter
+	-Once no more clumps are to be found, set litter scoop down in container to right of litter box.
+	-Tie up plastic bag. 
+-Exit the house and proceed to right side of building.
+-Deposit plastic bag into receptacle marked "garbage only"
+-end
