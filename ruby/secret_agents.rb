@@ -6,14 +6,12 @@
  # must figure out how to apply .next to every letter in the string and not just the final one.
 
 
-entry = gets.chomp
 
 def encrypt (y)
-	index = 0
-	while index < y.length
-	print y[index].next
-	index +=1
-end
+	alpha = "abcdefghijklmnopqrstuvwxyz"
+	replace = "bcdefghijklmnopqrstuvwxyza"
+	y.tr(alpha, replace)
+
 end
 
 #decrypt method
@@ -24,7 +22,9 @@ end
 def decrypt (y)
 	alpha = "abcdefghijklmnopqrstuvwxyz"
 	replace = "zabcdefghijklmnopqrstuvwxy"
-	print y.tr(alpha, replace)
+	y.tr(alpha, replace)
 	
 end	
 
+#This code will run both encrpytion and decrpytion basically keeping the information the same (encrypting and decrypting)
+# puts decrypt(encrypt("swordfish"))
