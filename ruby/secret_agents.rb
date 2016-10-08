@@ -28,3 +28,32 @@ end
 
 #This code will run both encrpytion and decrpytion basically keeping the information the same (encrypting and decrypting)
 # puts decrypt(encrypt("swordfish"))
+
+
+###User Input Pseudocode
+ # Request if the user would like to decrypt or encrypt their password
+ # they must enter decrypt or encrypt. To ensure it calls the right method we should make sure downcase.
+ # next they need to enter the password they want encrypted or decrypted.
+ # upon entry of their password we'll want to print the results of the action they selected
+
+ puts "Please let me know if you would like to decrypt or encrypt this password"
+
+selection = gets.chomp
+selection = selection.downcase
+
+until selection == "decrypt" || selection == "encrypt"
+	puts "Please only enter 'decrypt' or 'encrypt'"
+	selection = gets.chomp
+	selection = selection.downcase
+end
+
+puts "Please give me a password to manipulate:"
+
+password = gets.chomp
+password = password.downcase
+
+if selection == "decrypt"
+	puts decrypt(password)
+else 
+	puts encrypt(password)
+end
