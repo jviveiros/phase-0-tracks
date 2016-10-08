@@ -1,3 +1,59 @@
-body{
-	background-color: pink;
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: tahoma;
+  font-weight: bold;
+  
+}
+
+header p {
+	color: black;
+	background-color: teal;
+}
+
+p {
+  font-family: tahoma;
+  background-color: black;
+  color: white;
+}
+
+
+.column-1 {
+  background-color: lightblue;
+  display:inline-block;
+  width: 45%;
+  vertical-align: text-top;
+  padding: 5px;
+  border: solid black;
+  border-right-width: 1px;
+  height: 1002px;
+}
+
+.column-2 {
+  background-color: lightblue;
+  display:inline-block;
+  width: 45%;
+  vertical-align: text-top;
+  padding: 5px;
+  border: solid black;
+  border-left-width: 1px;
+  height: 1002px;
+}
+
+header {
+  border: solid black;
+  background-color: teal;
+  width: 90%;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+footer {
+  border: solid black;
+  background-color: teal;
+  padding: 5px;
+  width: 90%;
+  margin-top: 5px;
 }
