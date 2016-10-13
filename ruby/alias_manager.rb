@@ -5,29 +5,46 @@
 
 
 #Methods
-def name_reverse (fullname)
-	fullname.split(' ').reverse!.join(' ')
-end
-
-def name_encrypt (fullname)
-	name_array = fullname.split('')
-	name_array.each do |x|
-		if x == ["a", "e", "i", "o", "u" ]
-			x = vowels.next!
-		elsif x != ["a", "e", "i", "o", "u" ]
-			x.next!
+def alias_maker(fullname)
+	fullname= fullname.downcase
+	reverse_name = fullname.split(' ').reverse!.join(' ')
+	letter_array = reverse_name.split('') 
+	letter_array.map! do |char|
+		if char == "a"
+			char = "e"
+		elsif char == "e"
+			char = "i"
+		elsif char == "i"
+			char = "o"
+		elsif char == "o"
+			char = "u"
+		elsif char == "u"
+			char ="a"
+		elsif char == " "
+			char = " "
 		else
-			x = " "
+			if char.next == "a"
+			char = char.next!.next!
+			elsif char.next == "e"
+			char = char.next!.next!
+			elsif char.next == "i"
+			char = char.next!.next!
+			elsif char.next == "o"
+			char = char.next!.next!
+			elsif char.next == "u"
+			char = char.next!.next!
+			else	
+				char = char.next!
+			end
 		end
 	end
-	name_array.join('')
-		
+	new_name = letter_array.join
+	
 end
 
 
-
-
-
+puts alias_maker("Felicia Torres")
+ 
 
 
 
