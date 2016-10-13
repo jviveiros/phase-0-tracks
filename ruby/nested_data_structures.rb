@@ -36,4 +36,12 @@ city = {
 	}
 }
 
+puts city[:schools][:elementary][2]
 
+puts city[:roads][:streets][:scenic].upcase
+
+city[:parks][:free][0] = "cat parks"
+
+puts city[:parks][:free][0]
+
+puts city[:infrastructure][:gas].reverse!
