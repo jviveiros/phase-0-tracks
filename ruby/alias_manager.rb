@@ -39,14 +39,32 @@ def alias_maker(fullname)
 		end
 	end
 	new_name = letter_array.join
-	
+	full_alias = new_name.split.map(&:capitalize).join(" ")
 end
 
+#User Interface
+#Need to create a loop to repeated ask if they'd like to enter a first and last name and if not for them to type quit
 
-puts alias_maker("Felicia Torres")
- 
+puts "Identity Changer 3000(tm)"
 
+sleep (1)
 
+name = nil
+until name == "quit"
+	puts "Please enter a first and last name or type 'quit' to exit"
+	name = gets.chomp	
+	if name != "quit"
+	puts "Encrypting your super spy name:"
+
+	sleep (2)
+
+	puts alias_maker(name)
+else
+
+	puts "Thanks for using Identity Changer 3000(tm)"
+
+end
+end
 
 
 
