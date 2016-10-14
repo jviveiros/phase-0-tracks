@@ -50,6 +50,9 @@ puts "Identity Changer 3000(tm)"
 sleep (1)
 
 name = nil
+#storage of Agent Names
+agent_names = { }
+
 until name == "quit"
 	puts "Please enter a first and last name or type 'quit' to exit"
 	name = gets.chomp	
@@ -59,6 +62,10 @@ until name == "quit"
 	sleep (2)
 
 	puts alias_maker(name)
+
+#Populating the Agent Names Hash
+	agent_names[name] = alias_maker(name)
+
 else
 
 	puts "Thanks for using Identity Changer 3000(tm)"
@@ -66,5 +73,7 @@ else
 end
 end
 
-
-
+#Agent Report
+agent_names.each do |name, value|
+	puts "#{name} is actually #{value}"
+end
