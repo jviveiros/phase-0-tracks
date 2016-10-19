@@ -75,5 +75,5 @@ end
 
 #Agent Report
 agent_names.each do |name, value|
-	puts "#{name} is actually #{value}"
+	puts "#{value} is actually #{name}"
 end
