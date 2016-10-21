@@ -41,14 +41,46 @@ def list_creation (grocery_list_string)
 	end
 	return grocery_list
 end
-list_creation(" carrots apples cereal pizza")
+
 
 def add_item (grocery_list, item)
 	grocery_list[item] = 0
 end
 
-grocery_list = list_creation(" carrots apples cereal pizza")
-add_item(grocery_list, "pineapple")
-puts grocery_list
+def remove_item (grocery_list, item)
+	grocery_list.each do |grocery, qty|
+		if grocery == item
+			grocery_list.delete(grocery)
+		end
+	end
+end
+
+def change_qty (grocery_list, item, quant)
+	grocery_list.each do |grocery, qty|
+		if item == grocery && quant != qty
+			grocery_list[grocery] = quant
+		end
+	end
+end
+
+def print_list (grocery_list)
+	puts "Your shopping list is:"
+	grocery_list.each do |item, qty|
+		puts "#{item}: #{qty}"
+	end
+end
+
+
+
+grocery_list = list_creation(" Lemonade Tomatoes Onions IceCream")
+change_qty(grocery_list, "Lemonade",2)
+change_qty(grocery_list, "Tomatoes",3)
+change_qty(grocery_list, "Onions",1)
+change_qty(grocery_list, "IceCream",4)
+remove_item(grocery_list, "Lemonade")
+change_qty(grocery_list, "IceCream", 1)
+print_list(grocery_list)
+
+
 		
 		
