@@ -2,8 +2,7 @@
 #Santa Class
 class Santa 
 
-	@age = 0
-
+	
 	def speak
 		puts "The #{@ethnicity} #{@gender} Santa says: Ho, ho, ho! Haaaaappy holidays!"
 	end
@@ -16,14 +15,17 @@ class Santa
 		puts "Initializing Santa instance..."
 		@gender = gender
 		@ethnicity = ethnicity
+		@age = 0 
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		
 	end
 
 	def ethnicity
 		@ethnicity
 	end
 
-	def gender
-		@gender
+	def gender= (new_gender)
+		@gender = new_gender
 	end
 
 	def age
@@ -34,15 +36,13 @@ class Santa
 		@age +=1
 	end
 
-	@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-
 	def get_mad_at(reindeer)	
 		@reindeer_ranking.each do |i|
-			if i = reindeer 
-				@reindeer_ranking = @reindeer_ranking.push(i)
+			if i == reindeer 
+				
 			end
 		end
-		p @reindeer_ranking
+		return @reindeer_ranking
 	end
 	
 end
@@ -64,4 +64,5 @@ santas.each do |santas|
 end
 
 santa = Santa.new("Female", "black")
-santa.get_mad_at ("Rudolph")
+santa.gender="Agender"
+puts "The #{santa.age} year old #{santa.ethnicity} Santa is here!"
