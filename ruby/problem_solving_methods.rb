@@ -28,10 +28,10 @@
 #if we input 8 we want [0,1,2,3,5,8,13,21]
 
 def fib(n)
-arr = [0, 1]
+arr = []
 a = 0
 b = 1 
-n.times do
+(n-1).times do
 	c = a + b
 	a = b
 	b = c
@@ -40,7 +40,7 @@ n.times do
 return arr
 end
 
-p fib(6) 
+p fib(100) 
 
 
 
@@ -64,7 +64,7 @@ def bub_sort (array)
 	break if not swapped
 end
 
-array
+return array
 end
 
 p bub_sort(array)
