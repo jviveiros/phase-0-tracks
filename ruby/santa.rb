@@ -36,10 +36,15 @@ class Santa
 		@age +=1
 	end
 
+	def reindeer_ranking
+		puts @reindeer_ranking
+	end
+
 	def get_mad_at(reindeer)	
 		@reindeer_ranking.each do |i|
-			if i == reindeer 
-				
+			if i == reindeer
+			@reindeer_ranking.delete(i)
+			@reindeer_ranking.push(i)
 			end
 		end
 		return @reindeer_ranking
@@ -66,3 +71,4 @@ end
 santa = Santa.new("Female", "black")
 santa.gender="Agender"
 puts "The #{santa.age} year old #{santa.ethnicity} Santa is here!"
+p santa.get_mad_at("Rudolph")
