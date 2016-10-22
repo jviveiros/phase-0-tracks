@@ -1,7 +1,8 @@
 
 #Santa Class
 class Santa 
-
+  attr_reader :ethnicity, :age, :reindeer_ranking
+  attr_accessor :gender
 	
 	def speak
 		puts "The #{@ethnicity} #{@gender} Santa says: Ho, ho, ho! Haaaaappy holidays!"
@@ -20,24 +21,8 @@ class Santa
 		
 	end
 
-	def ethnicity
-		@ethnicity
-	end
-
-	def gender= (new_gender)
-		@gender = new_gender
-	end
-
-	def age
-		@age
-	end
-
 	def celebrate_birthday
 		@age +=1
-	end
-
-	def reindeer_ranking
-		puts @reindeer_ranking
 	end
 
 	def get_mad_at(reindeer)	
@@ -70,5 +55,5 @@ end
 
 santa = Santa.new("Female", "black")
 santa.gender="Agender"
-puts "The #{santa.age} year old #{santa.ethnicity} Santa is here!"
+puts "The #{santa.age} year old #{santa.ethnicity} #{santa.gender} Santa is here!"
 p santa.get_mad_at("Rudolph")
