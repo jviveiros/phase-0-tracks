@@ -1,8 +1,8 @@
 
 #Santa Class
 class Santa 
-  attr_reader :ethnicity, :age, :reindeer_ranking
-  attr_accessor :gender
+  attr_reader :ethnicity, :reindeer_ranking
+  attr_accessor :gender, :age
 	
 	def speak
 		puts "The #{@ethnicity} #{@gender} Santa says: Ho, ho, ho! Haaaaappy holidays!"
@@ -41,19 +41,17 @@ end
 #Santa Holding Cell
 santas = []
 
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "unicorn", "N/A"]
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A", "bicurious"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "unicorn", "vampire", "dwarf", "werewolf", "N/A"]
 
-example_genders.length.times do |i|
-	santas << Santa.new(example_genders[i], example_ethnicities[i])
-	puts "There are now #{santas.length} Santas in the array"
+
+#Program to create multiple santa instances
+
+#Need to randomly generate santas by initializing and randomly selecting a gender and ethnicity and setting the age to a random number from 0 to 140
+
+1000.times do |i|
+	i = Santa.new(example_ethnicities.sample, example_genders.sample) 
+	i.age= rand(140)
+	puts "Your Santa is #{i.age}, #{i.ethnicity}, #{i.gender} and has the following reindeer #{i.reindeer_ranking}."
 end
 
-santas.each do |santas|
-	santas.speak
-end
-
-santa = Santa.new("Female", "black")
-santa.gender="Agender"
-puts "The #{santa.age} year old #{santa.ethnicity} #{santa.gender} Santa is here!"
-p santa.get_mad_at("Rudolph")
