@@ -2,18 +2,17 @@
 #Class Code
 class Game
 
-	attr_reader :guess_number, :answer, 
-	
+	attr_reader 
+
 	def initialize (answer)
 		@answer = answer
-		@answer_arry = @answer.split('')
-		@guess_number = @answer.length
-		puts "Welcome to Word Guesser."
-		puts "You will have #{@guess_number} attempts to guess the word."
-		puts "The word is:" 
-		p " _ "*@guess_number
-	end		
+		@answer_arr = @answer.split('')
+		@guess_count = @answer.length
+		puts "Welcome to the Guessing Game."
+		puts "Based on the word you'll have #{@guess_count} guesses."
+		print "The current word is: "
+		print " _ "*@guess_count
+	end
 end
 
-#Driver Code
 round1 = Game.new("Joseph")
