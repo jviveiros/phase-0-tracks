@@ -4,6 +4,9 @@
 // then take the second to last letter and replace it with the second letter
 // and so on until it can no longer swap letters.
 
+//Pseudo Code after researching. 
+// Split the string into an array, reverse the array, and then join the array to form the word in reverse.
+
 function reverse(string) {
 	return string.split('').reverse().join('');
 }
