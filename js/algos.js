@@ -17,7 +17,7 @@ var people = {james: 54, lyrial: 52, jonas: 46, jonas: 32, eleanor: 32}
 function LongestPhrase(array) {
 		
 		for( var i = 0; i < array.length; i++){
-			var lgth = 0
+			var lgth = array[i] ;
 		    for (array[i].length > lgth);
 		 	var lgth = array[i].length;
 		 	var longest = array[i];
@@ -35,22 +35,23 @@ function LongestPhrase(array) {
 //Function needs to be able to use an iterative approach of going through each object pair
 //Testing will be done on pre-created objects
 
-// function KeyMatch(object){
-// 		for( var i = 0; i < object.length; i++){
-// 			for (key in object[i]){
-// 			if(object[i][key] == object[i+1][key]){
-// 				return console.log("It's a match"+ object[i][key] + object[i+1][key]);
-// 			}else
-// 				return console.log("Sorry, no matches were found.");
-// 		}
-// }
-// }
+function KeyMatch(object){
+		for( var i = 0; i < object.length; i++){
+			for (key in object[i]){
+			if(object[i][key] == object[i+1][key]){
+				return console.log("It's a match"+ object[i][key] + object[i+1][key]);
+			}else
+				return console.log("Sorry, no matches were found.");
+		}
+}
+}
 
 
 
+//Release 3
 
-
-
+//Input for the function is an integer and the return would be an array of strings of the given length
+//minimum 1 letter maximum 10 letters
 
 
 
