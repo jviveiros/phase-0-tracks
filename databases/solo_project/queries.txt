@@ -1,0 +1,48 @@
+
+//SQL Querie  1
+sqlite> SELECT * FROM NFL
+   ...> ;
+1|Tom Brady|QB|39|1
+2|Antonio Brown|WR|28|2
+3|Derek Carr|QB|25|3
+4|Joe Staley|OT|32|4
+sqlite>
+
+//SQL Querie 2: Condition Derek Carr decides to play wide receiver
+
+sqlite> UPDATE NFL SET position= "WR" WHERE player= "Derek Carr";
+sqlite> SELECT * FROM NFL
+   ...> ;
+1|Tom Brady|QB|39|1
+2|Antonio Brown|WR|28|2
+3|Derek Carr|WR|25|3
+4|Joe Staley|OT|32|4
+sqlite>
+
+//SQL Querie 3: Print both tables side by side
+
+sqlite> SELECT * FROM NFL, affiliation WHERE NFL.affiliation_id = affiliation.id;
+1|Tom Brady|QB|39|1|1|New England Patriots|Foxborough, MA
+2|Antonio Brown|WR|28|2|2|Steelers|Pittsburgh, PA
+3|Derek Carr|WR|25|3|3|Raiders|Oakland, CA
+4|Joe Staley|OT|32|4|4|49ers|Santa Clara, CA
+sqlite>
+
+//SQL Querie 4: Display a narrower selection of columns from both tables.
+
+sqlite> SELECT NFL.player, affiliation.TeamName FROM NFL JOIN affiliation ON NFL.affiliation_id = affiliation.id;
+Tom Brady|New England Patriots
+Antonio Brown|Steelers
+Derek Carr|Raiders
+Joe Staley|49ers
+sqlite>
+
+//SQL Querie 5: Delete an item that meets a condition
+
+sqlite> DELETE FROM NFL WHERE age > 30;
+sqlite> SELECT * FROM NFL;
+2|Antonio Brown|WR|28|2
+3|Derek Carr|WR|25|3
+sqlite>
+
+Good Bye Joe Staley and Tom Brady.
