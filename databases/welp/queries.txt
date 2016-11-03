@@ -1,0 +1,41 @@
+
+//Joining Three  Tables
+sqlite> SELECT businesses.*, users.*, reviews.*
+   ...> FROM  businesses
+   ...> JOIN  users
+   ...> ON users.id = businesses.id
+   ...> JOIN reviews
+   ...> ON reviews.id = users.id
+   ...> WHERE reviews.stars > 0;
+1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt|1|4|Solid Spaghetti|1|2
+2|Amir's Towing|2|Mandy|Kaling|2|3|Meh|2|1
+3|The Beagle Nightclub|3|Angela|Jolie|3|5|OMG|3|3
+4|Lotus Yoga|4|Steven|Wonder|4|1|I vomited|4|2
+sqlite>
+
+
+//  Joining Three Tables without some info
+
+sqlite> SELECT users.First, users.Last, reviews.stars, reviews.comment, businesses.name
+   ...> FROM users
+   ...> JOIN reviews
+   ...> ON reviews.user_id = users.id
+   ...> JOIN businesses
+   ...> ON businesses.id = reviews.business_id;
+Mandy|Kaling|4|Solid Spaghetti|Grundy Hollow Wedding Chapel
+Bradford|Pitt|3|Meh|Amir's Towing
+Angela|Jolie|5|OMG|The Beagle Nightclub
+Mandy|Kaling|1|I vomited|Lotus Yoga
+sqlite>
+
+//View Data for all tables for just one business
+
+sqlite>  SELECT users.First, users.Last, reviews.stars, reviews.comment, businesses.name
+   ...>  FROM users
+   ...>  JOIN reviews
+   ...>  ON reviews.user_id = users.id
+   ...>  JOIN businesses
+   ...>  ON businesses.id = reviews.business_id
+   ...>  WHERE businesses.name = "Grundy Hollow Wedding Chapel";
+   
+Mandy|Kaling|4|Solid Spaghetti|Grundy Hollow Wedding Chapel
