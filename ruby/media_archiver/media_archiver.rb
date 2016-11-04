@@ -60,7 +60,7 @@ answer = gets.chomp.downcase
 if answer == 'y'
 	media = db.execute ("SELECT * FROM media")
 	media.each do |media|
-	puts "You have #{media["title"]} which is an #{media["mediatype"]} that you #{media["rentLease"]} and it's #{media["mediaconsumed"]} that you have consumed it."
+	puts "You have #{media[2]} which is a #{media[1]} that you #{media[3]} and it's #{media[4]} that you have consumed it."
 	end
 else
 	puts "Have a wonderful day!"
