@@ -1,0 +1,23 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	background-color: purple;
+	color:white;
+	text-align: center;
+}
+p {
+	font-family:arial;
+	text-align:center;
+	color: white;
+	border:5px solid blue;
+}
+h2 {
+	text-align: center;
+	color: lime;
+}
+li {
+	text-align: center;
+	list-style: none;
+}
